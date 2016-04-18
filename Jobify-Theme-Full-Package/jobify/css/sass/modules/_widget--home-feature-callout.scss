@@ -1,0 +1,157 @@
+.feature-callout {
+	position: relative;
+}
+
+.feature-callout-image-pull,
+.feature-callout-cover {
+	background-size: cover;
+	background-position: center;
+}
+
+.feature-callout-image-pull {
+	min-height: 200px;
+}
+
+	@include bp(sm) {
+		.feature-callout-image-pull {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+		}
+	}
+
+.feature-callout-cover {
+	&.has-overlay:after {
+		content: ' ';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		width: 100%;
+
+		background: rgba(0,0,0,.50);
+	}
+
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+
+	.button {
+		@extend .button--style-inverted;
+		color: #fff;
+		border-color: #fff;
+
+		&:hover {
+			background-color: #fff;
+			border-color: #fff;
+		}
+	}
+}
+
+.feature-callout.text-right {
+	.feature-callout-content {
+		text-align: right;
+	}
+
+	.feature-callout-cover {
+		background-position: center left;
+	}
+}
+
+.feature-callout.text-left .feature-callout-cover {
+	background-position: center right;
+}
+
+	@include bp(sm) {
+		.feature-callout .feature-callout-cover.has-overlay:after {
+            background: rgba(0, 0, 0, 0.45);
+		}
+	}
+
+.feature-callout.text-center .feature-callout-cover {
+	text-align: center;
+}
+
+	@include bp(md) {
+		.feature-callout.text-center .callout-feature-content {
+			max-width: 75%;
+			margin: 0 auto;
+		}
+
+		.feature-callout.text-center h2 {
+			font-size: 48px;
+			font-weight: normal;
+		}
+	}
+
+.callout-feature-content {
+	padding: 3em 0;
+
+	h2 {
+		font-size: 24px;
+		margin-top: 0;
+	}
+
+	p {
+		line-height: 1.75;
+
+		-webkit-hyphens: none;
+		-moz-hyphens:    none;
+		-ms-hyphens:     none;
+		hyphens:         none;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+	@include bp(sm) {
+		.callout-feature-content {
+			padding-top: 6em;
+			padding-bottom: 6em;
+
+			h2 {
+				font-size: 30px;
+				font-weight: 400;
+				line-height: 1.9;
+				margin: 0;
+			}
+
+			p {
+				line-height: 2;
+				margin: 1.5em 0;
+			}
+		}
+
+		.feature-callout.text-left .callout-feature-content {
+			padding-right: 2em;
+		}
+
+		.feature-callout.text-right .callout-feature-content {
+			padding-left: 2em;
+		}
+	}
+
+	@include bp(md) {
+		.callout-feature-content {
+			padding-top: 8em;
+			padding-bottom: 8em;
+		}
+	}
+
+	@include bp(lg) {
+		.callout-feature-content {
+			padding-top: 12em;
+			padding-bottom: 12em;
+		}
+
+		.feature-callout.text-left .callout-feature-content {
+			padding-right: 3em;
+		}
+
+		.feature-callout.text-right .callout-feature-content {
+			padding-left: 3em;
+		}
+	}

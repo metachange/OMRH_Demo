@@ -1,0 +1,12 @@
+.view-video,
+.view-video {
+	@extend .button;
+	@extend .button--type-action;
+
+	margin-top: 1em;
+}
+
+.modal .company_video,
+.modal .candidate-video {
+	padding: 90px 30px 30px;
+}

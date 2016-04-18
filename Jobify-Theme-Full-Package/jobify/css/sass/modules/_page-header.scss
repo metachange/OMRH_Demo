@@ -1,0 +1,21 @@
+.page-header {
+	font: normal 38px/normal 'Varela Round', sans-serif;
+	text-align: center;
+	padding: 20px 0;
+	background: #fafafa;
+	border-bottom: 1px solid #ccc;
+
+	&.has-image {
+		padding: 0;
+		border: 0;
+		max-height: 400px;
+		overflow: hidden;
+
+		img {
+			min-width: 100%;
+			width: auto;
+			height: auto;
+			display: block;
+		}
+	}
+}
